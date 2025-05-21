@@ -1,0 +1,314 @@
+/* История - специфични стилове */
+.history-page {
+    background-color: #f5f0e8;
+    color: #333;
+}
+
+.history-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background: url('../images/history-banner.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    color: #f5d742;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Хронологична линия */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--secondary-color);
+    background: linear-gradient(to bottom, #784421, #f5d742, #784421);
+}
+
+.era {
+    position: relative;
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.era:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.era::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 2rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 4px solid var(--secondary-color);
+    z-index: 2;
+}
+
+.era-header {
+    background: var(--dark-bg);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.era-title {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.era-period {
+    font-style: italic;
+    opacity: 0.8;
+    background: rgba(245, 215, 66, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+}
+
+.era-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+.era-text p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.era-facts {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.era-facts li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.era-facts li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.era-image {
+    border-radius: 4px;
+    overflow: hidden;
+    align-self: center;
+}
+
+.era-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.era-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Ключови събития */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.event-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.event-title {
+    background: var(--dark-bg);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.event-date {
+    padding: 0.8rem 1rem;
+    background: #f0e6d6;
+    font-style: italic;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.event-card p {
+    padding: 1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.event-tags {
+    padding: 0 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background: #f0e6d6;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #784421;
+}
+
+/* Исторически личности */
+.figures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.figure-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.figure-card:hover {
+    transform: translateY(-5px);
+}
+
+.figure-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.figure-name {
+    margin: 1rem 0 0.5rem;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.figure-desc {
+    padding: 0 1rem 1.5rem;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Медия заявки */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .era-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .era-image {
+        order: -1;
+    }
+    
+    .era::before {
+        left: -2.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .era-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .era-period {
+        margin-top: 0.5rem;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .era::before {
+        left: -1.8rem;
+        width: 16px;
+        height: 16px;
+    }
+}

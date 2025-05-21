@@ -1,0 +1,341 @@
+/* Пръстен - специфични стилове */
+.ring-page {
+    background-color: #f5f0e8;
+    color: #333;
+}
+
+.ring-hero {
+    position: relative;
+    height: 40vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+    color: #f5d742;
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Интро секция */
+.ring-intro {
+    padding: 3rem 0;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Основно съдържание */
+.ring-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem;
+    color: #333;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #f5d742;
+}
+
+/* История на Пръстена */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 35px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #f5d742, #784421, #f5d742);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 50px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #784421;
+    border: 3px solid #f5d742;
+    z-index: 2;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 90px;
+    text-align: right;
+    font-weight: bold;
+    color: #784421;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Сили и свойства */
+.powers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.power-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.power-card:hover {
+    transform: translateY(-5px);
+}
+
+.power-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.power-card h3 {
+    color: #784421;
+    margin-top: 0;
+}
+
+.inscription {
+    max-width: 600px;
+    margin: 3rem auto;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    color: #f5d742;
+    font-family: 'Ringbearer', 'Times New Roman', serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.inscription-translation {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ccc;
+    font-style: italic;
+}
+
+/* Носители */
+.bearers-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bearer {
+    display: flex;
+    margin-bottom: 2rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.bearer-image {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.bearer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.bearer-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.bearer-info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.bearer-period {
+    font-weight: bold;
+    color: #784421;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Символика */
+.symbolism-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.symbolism-list {
+    padding-left: 1.5rem;
+}
+
+.symbolism-list li {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.symbolism-list li::before {
+    content: '•';
+    color: #f5d742;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.quote {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f0e6d6;
+    border-left: 4px solid #f5d742;
+    font-style: italic;
+}
+
+.quote blockquote {
+    margin: 0;
+}
+
+/* Медия заявки */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .timeline {
+        padding-left: 0;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+    }
+    
+    .timeline-item::before {
+        left: 15px;
+    }
+    
+    .timeline-date {
+        position: static;
+        width: auto;
+        text-align: left;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #784421;
+    }
+    
+    .bearer {
+        flex-direction: column;
+    }
+    
+    .bearer-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .powers-grid {
+        grid-template-columns: 1fr;
+    }
+}

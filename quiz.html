@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Властелинът на пръстените | Викторина</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <script src="js/quiz.js" defer></script>
+    <script src="js/common.js" defer></script>
+</head>
+<body class="quiz-page">
+    <header class="site-header">
+        <div id="navbar" class="main-navigation"></div>
+
+        <div class="quiz-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Викторина: Познаваш ли Средната земя?</h1>
+                <p class="hero-subtitle">Провери знанията си с 5 вълнуващи въпроса!</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="quiz-container">
+            <form id="quiz-form">
+                <!-- Въпрос 1 -->
+                <div class="quiz-question">
+                    <h3>1. Кой унищожава Единствения пръстен?</h3>
+                    <label><input type="radio" name="q1" value="a"> Арагорн</label>
+                    <label><input type="radio" name="q1" value="b"> Фродо</label>
+                    <label><input type="radio" name="q1" value="c"> Голъм</label>
+                </div>
+
+                <!-- Въпрос 2 -->
+                <div class="quiz-question">
+                    <h3>2. Какво е истинското име на Гандалф в Мая формата му?</h3>
+                    <label><input type="radio" name="q2" value="a"> Митрандир</label>
+                    <label><input type="radio" name="q2" value="b"> Олорин</label>
+                    <label><input type="radio" name="q2" value="c"> Саруман</label>
+                </div>
+
+                <!-- Въпрос 3 -->
+                <div class="quiz-question">
+                    <h3>3. Къде се намира Елронд?</h3>
+                    <label><input type="radio" name="q3" value="a"> Лотлориен</label>
+                    <label><input type="radio" name="q3" value="b"> Гондор</label>
+                    <label><input type="radio" name="q3" value="c"> Ривендел</label>
+                </div>
+
+                <!-- Въпрос 4 -->
+                <div class="quiz-question">
+                    <h3>4. Колко Пръстена на силата са дадени на хората?</h3>
+                    <label><input type="radio" name="q4" value="a"> 5</label>
+                    <label><input type="radio" name="q4" value="b"> 7</label>
+                    <label><input type="radio" name="q4" value="c"> 9</label>
+                </div>
+
+                <!-- Въпрос 5 -->
+                <div class="quiz-question">
+                    <h3>5. Какво е името на меча на Арагорн?</h3>
+                    <label><input type="radio" name="q5" value="a"> Нарсил</label>
+                    <label><input type="radio" name="q5" value="b"> Андурил</label>
+                    <label><input type="radio" name="q5" value="c"> Гламдринг</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Провери резултата</button>
+            </form>
+
+            <div id="quiz-result" class="quiz-result hidden"></div>
+        </section>
+    </main>
+
+    <div id="footer" class="site-footer"></div>
+</body>
+</html>

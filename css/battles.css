@@ -1,0 +1,161 @@
+/* Стил за страницата с битки */
+.battles-page {
+    background-color: #f5f0e8;
+}
+
+.battles-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background: url('../images/battles-banner.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    color: #f5d742;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Въведение */
+.battles-intro {
+    padding: 3rem 0;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.battles-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Основен контейнер */
+.battles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+}
+
+/* Картички за битки */
+.battle-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.battle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.battle-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.battle-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color, #9c27b0);
+}
+
+.battle-description {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.battle-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.stat-item strong {
+    color: #333;
+}
+
+/* Медия заявки */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .battle-title {
+        font-size: 1.5rem;
+    }
+
+    .battle-description {
+        font-size: 1rem;
+    }
+
+    .battles-intro p {
+        font-size: 1.05rem;
+    }
+
+    .battle-stats {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,297 @@
+/* Раси - специфични стилове */
+.races-page {
+    background-color: #f5f0e8;
+}
+
+.races-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    background: url('../images/races-banner.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    color: #f5d742;
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Интро секция */
+.intro-section {
+    padding: 3rem 0;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Картички за раси */
+.races-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+}
+
+.race-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.race-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.race-image {
+    height: 100%;
+    min-height: 300px;
+}
+
+.race-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.race-content {
+    padding: 2rem 2rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.race-title {
+    font-size: 2rem;
+    margin-top: 0;
+    color: #333;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.race-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.race-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.meta-item strong {
+    color: #333;
+}
+
+.race-description {
+    margin: 1rem 0;
+    line-height: 1.7;
+    color: #555;
+}
+
+.race-list {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.race-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.race-list li::before {
+    content: '•';
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.race-characters {
+    margin-top: auto;
+}
+
+.race-characters h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.characters-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.character-link {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: #f0e6d6;
+    border-radius: 20px;
+    color: #784421;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.character-link:hover {
+    background: var(--primary-color);
+    color: #1a1a1a;
+}
+
+/* Други раси */
+.other-races {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.other-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.other-race {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.other-race h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+/* Специфични стилове за всяка раса */
+.elf .race-title::after {
+    background: #5b92e5;
+}
+
+.human .race-title::after {
+    background: #784421;
+}
+
+.hobbit .race-title::after {
+    background: #8bc34a;
+}
+
+.dwarf .race-title::after {
+    background: #b87333;
+}
+
+.orc .race-title::after {
+    background: #8b0000;
+}
+
+/* Медия заявки */
+@media (max-width: 992px) {
+    .race-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .race-content {
+        padding: 2rem;
+    }
+    
+    .race-image {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .race-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .other-grid {
+        grid-template-columns: 1fr;
+    }
+}
